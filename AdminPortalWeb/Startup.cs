@@ -33,8 +33,12 @@ namespace AdminPortalWeb
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+          
+
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+
+           
 
             services.AddMvc();
         }
@@ -56,6 +60,8 @@ namespace AdminPortalWeb
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            
 
             app.UseMvc(routes =>
             {
